@@ -1,7 +1,7 @@
 // --- 1. 전역 변수 설정 ---
 const API_URL = 'http://127.0.0.1:5000/api/download_midi'; 
 const PDF_API_URL = 'http://127.0.0.1:5000/api/get_pdf_content'; 
-const VIRTUAL_WAIT_SECONDS = 5; 
+const VIRTUAL_WAIT_SECONDS = 2; 
 
 let isProcessing = false;
 let midiBlob = null;
