@@ -1,0 +1,296 @@
+/* === 🌿 전역 스타일 === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e3e4e6; /* 🔹 사이트 전체 배경 밝은 회색으로 변경 */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* === 🌟 상단 메뉴바 (은은한 회색 배경) === */
+.app-header {
+  background-color: #f7f7f8;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 로고/타이틀 */
+.logo-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.app-logo {
+  font-size: 1.6em;
+}
+
+.app-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* 네비게이션 */
+.header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+/* 메뉴 버튼 */
+.header-nav .nav-button {
+  background: none;
+  border: none;
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.95em;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header-nav .nav-button:hover {
+  background-color: #e8e8eb;
+  color: #111827;
+}
+
+.header-nav .nav-button.active {
+  background-color: #e2e3e7;
+  color: #111827;
+  font-weight: 700;
+}
+
+/* === 🌿 중앙 메인 컨테이너 === */
+.container {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 70px 80px;
+  max-width: 950px;
+  margin: 60px auto;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* 제목 / 부제목 */
+.main-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* === 🩶 드롭존 (컴팩트하게 수정됨) === */
+.drop-zone {
+  border: 2px dashed #cbd5e1;
+  border-radius: 22px;
+  background-color: #fafbff;
+  padding: 60px 30px; /* 🔹 기존 80px → 60px로 줄임 */
+  text-align: center;
+  color: #475569;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  max-width: 90%; /* 🔹 폭을 살짝 줄여 중앙 여백 확보 */
+  margin: 0 auto 30px;
+}
+
+.drop-zone.active {
+  background-color: #eef3ff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.3);
+  color: #1e3a8a;
+}
+
+.drop-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* === 📂 파일 입력 === */
+input[type="file"] {
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  background-color: #f8fafc;
+  padding: 14px;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #a0aec0;
+  box-shadow: 0 0 6px rgba(160, 174, 192, 0.3);
+}
+
+/* === 🔘 버튼 === */
+button,
+.button-primary,
+.drop-button,
+.pdf-viewer-mobile-only {
+  padding: 18px 26px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background:  #0092B8;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+button:hover:not(.nav-button),
+.button-primary:hover,
+.drop-button:hover,
+.pdf-viewer-mobile-only:hover {
+  background: linear-gradient(135deg, #2d3748, #1e293b);
+  transform: translateY(-2px);
+}
+
+/* === ⚙️ 상태 메시지 === */
+.status-container {
+  margin-top: 30px;
+}
+
+.status-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* === ✅ 결과창 === */
+.result-container {
+  border-radius: 18px;
+  background-color: #f0fff4;
+  border: 1px solid #c6f6d5;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.result-container a {
+  color: #38a169;
+  text-decoration: underline;
+  display: block;
+  margin: 10px 0;
+}
+
+/* === ℹ️ 메뉴별 더미 뷰 === */
+.menu-view {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 18px;
+  background: #f8fafc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.menu-view h3 {
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.menu-view p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* === ⚓ 푸터 === */
+.app-footer {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.app-footer a {
+  color: #4b5563;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.2s;
+}
+
+.app-footer a:hover {
+  color: #1f2937;
+  text-decoration: underline;
+}
+
+.app-footer .footer-disclaimer {
+  font-size: 0.8em;
+  color: #94a3b8;
+  margin-top: 15px;
+}
+
+/* === 📱 모바일 반응형 === */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 22px;
+    width: 95%;
+    max-width: none;
+    border-radius: 18px;
+  }
+
+  .main-title {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .header-nav .nav-button {
+    font-size: 0.85em;
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+
+  .app-title {
+    font-size: 1em;
+  }
+
+  button,
+  .button-primary {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* 🔹 모바일 드롭존 크기도 함께 축소 */
+  .drop-zone {
+    padding: 50px 25px;
+    max-width: 95%;
+  }
+}
