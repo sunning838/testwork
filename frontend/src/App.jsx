@@ -7,7 +7,7 @@ import { ResultDisplay } from './components/ResultDisplay.jsx';
 import { AboutUsView } from './components/AboutUsView.jsx';
 import imi from "./assets/imi.png";
 // [신규] 메뉴별 컴포넌트 더미 (기능 구현 시 실제 컴포넌트로 대체)
-
+  
 
 const HelpView = () => (
   <div className="menu-view">
