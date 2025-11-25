@@ -663,6 +663,16 @@ button:hover:not(.nav-button),
   margin-right: auto;
 } */
 
+/*버튼 파티클 효과*/
+particle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none; /* 파티클이 클릭을 가로채지 않도록 설정 */
+  opacity: 0;
+  z-index: 9999;
+}
+
 /* === 🌙 다크모드 스타일 === */
 .dark-mode .app-header {
   background-color: #2a2a2a;

@@ -143,8 +143,7 @@ def download_midi_route(job_id):
 @app.route('/download/pdf/<job_id>', methods=['GET'])
 def download_pdf_route(job_id):
     """
-    (frontend/src/components/ResultDisplay.jsx에서 <iframe> 및 다운로드 링크로 사용) [cite: sunning838/testwork/testwork-f405721f350910119482f7b5a4b2e4d52743c502/frontend/src/components/ResultDisplay.jsx]
-    로컬의 'test.pdf' 파일을 브라우저에 표시(inline)하거나 다운로드시킵니다.
+    로컬의 'test.pdf' 파일을 브라우저에 표시하거나 다운로드시킵니다.
     """
     print(f"[{job_id}] PDF 요청 수신")
     
@@ -153,11 +152,17 @@ def download_pdf_route(job_id):
        print(f"[{job_id}] 오류: PDF 파일을 찾을 수 없습니다. 경로: {PDF_FILE_PATH}")
        return jsonify({"error": f"PDF 파일이 서버 경로에 없습니다: {PDF_FILE_PATH}"}), 404
 
+    # 🌟 [수정된 부분] URL에 ?download=true 가 있는지 확인합니다.
+    # 예: /download/pdf/job123?download=true -> True
+    # 예: /download/pdf/job123               -> False
+    is_download = request.args.get('download') == 'true'
+
     # 2. PDF 파일 전송
     return send_file(
         PDF_FILE_PATH,
         mimetype='application/pdf',
-        as_attachment=False, # <iframe>에 표시될 수 있도록 False로 설정
+        # 🌟 [수정된 부분] 조건에 따라 다운로드 여부를 결정합니다.
+        as_attachment=is_download, 
         download_name=f"{job_id}_score.pdf"
     )
 
