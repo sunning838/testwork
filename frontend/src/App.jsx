@@ -4,15 +4,10 @@ import * as api from './services/api'; // Api 내에 UI 코드 없음 (가정)
 import { UploadForm } from './components/UploadForm.jsx';
 import { StatusTracker } from './components/StatusTracker.jsx';
 import { ResultDisplay } from './components/ResultDisplay.jsx';
+import { AboutUsView } from './components/AboutUsView.jsx';
 import imi from "./assets/imi.png";
 // [신규] 메뉴별 컴포넌트 더미 (기능 구현 시 실제 컴포넌트로 대체)
-const MidiToPdfView = () => (
-  <div className="menu-view">
-    <h3>MIDI to PDF 변환</h3>
-    <p>MIDI 파일을 업로드하면 PDF 악보로 변환되는 기능이 곧 추가됩니다.</p>
-    <p>기능 추가를 기다려주세요! 🛠️</p>
-  </div>
-);
+
 
 const HelpView = () => (
   <div className="menu-view">
@@ -189,8 +184,8 @@ function App() {
             {renderMainContent()}
           </>
         );
-      case 'midi to pdf':
-        return <MidiToPdfView />;
+      case 'About Us':
+        return <AboutUsView />;
       case 'help':
         return <HelpView />;
       default:
@@ -215,7 +210,7 @@ function App() {
           </div>
 
           <nav className="header-nav">
-            {['mp3 to midi', 'midi to pdf', 'help'].map((menu) => (
+            {['mp3 to midi', 'About Us', 'help'].map((menu) => (
               <button
                 key={menu}
                 className={`nav-button ${currentMenu === menu ? 'active' : ''}`}
