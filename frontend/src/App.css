@@ -94,7 +94,7 @@ body {
   transition: all 0.4s ease;
   
   /* ☀️ 라이트 모드 배경: 맑은 하늘색 */
-  background: #87CEEB; 
+  background: #e5e5e5; 
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,7 +107,7 @@ body {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #FFD700; /* 해 색상: 노란색 */
+  background: #F0F3F4; /* 해 색상: 노란색 */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* 팅겨나가는 듯한 애니메이션 */
   
@@ -123,7 +123,7 @@ body {
 
 /* 🌌 다크 모드 배경: 밤하늘색 */
 .checkbox input:checked + label {
-  background: #2C3E50; 
+  background: #000000; 
 }
 
 /* 🌙 다크 모드 썸: 달 아이콘으로 변경 및 이동 */

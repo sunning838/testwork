@@ -32,41 +32,7 @@ export function AboutUsView() {
         </div>
       </section>
 
-      {/* 3. 상세 기술 스택 (README 기반) */}
-      <section style={{ marginBottom: '50px' }}>
-        <h3 style={{ borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px', color: '#1e3a8a' }}>
-          🛠️ 사용 기술 스택
-        </h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '15px' }}>
-          {/* Backend */}
-          <div style={{ background: '#f0fdf4', padding: '15px', borderRadius: '12px', border: '1px solid #bbf7d0' }}>
-            <strong style={{ color: '#15803d', display: 'block', marginBottom: '5px' }}>Backend</strong>
-            Python, Flask
-          </div>
-          {/* Frontend */}
-          <div style={{ background: '#eff6ff', padding: '15px', borderRadius: '12px', border: '1px solid #bfdbfe' }}>
-            <strong style={{ color: '#1d4ed8', display: 'block', marginBottom: '5px' }}>Frontend</strong>
-            React, Vite, Axios
-          </div>
-          {/* AI Model */}
-          <div style={{ background: '#fff7ed', padding: '15px', borderRadius: '12px', border: '1px solid #fed7aa' }}>
-            <strong style={{ color: '#c2410c', display: 'block', marginBottom: '5px' }}>AI / Deep Learning</strong>
-            TensorFlow (Keras), TFLite, MLflow, CNN (2D)
-          </div>
-          {/* Audio & Score */}
-          <div style={{ background: '#faf5ff', padding: '15px', borderRadius: '12px', border: '1px solid #e9d5ff' }}>
-            <strong style={{ color: '#7e22ce', display: 'block', marginBottom: '5px' }}>Audio & Score</strong>
-            Demucs, Librosa, PrettyMIDI, Music21, MuseScor  e 3
-          </div>
-          {/* Infra */}
-          <div style={{ background: '#ffffffff', padding: '15px', borderRadius: '12px', border: '1px solid #e5e7eb' }}>
-            <strong style={{ color: '#374151', display: 'block', marginBottom: '5px' }}>Deployment</strong>
-            Docker (NVIDIA CUDA 11.8)
-          </div>
-        </div>
-      </section>
-
-      {/* 4. 팀원 정보 (업데이트된 역할 반영) */}
+      {/*팀원 정보 (업데이트된 역할 반영) */}
       <section>
         <h3 style={{ borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px', color: '#1e3a8a' }}>
           👥 Team 경로당
@@ -85,31 +51,31 @@ export function AboutUsView() {
               <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
                 <td style={{ padding: '12px' }}>윤상일</td>
                 <td style={{ padding: '12px' }}>2020E7424</td>
-                <td style={{ padding: '12px', fontWeight: 'bold', color: '#d97706' }}>AI/ML</td>
+                <td style={{ padding: '12px'}}>AI/ML</td>
                 <td style={{ padding: '12px' }}>모델 설계 및 학습</td>
               </tr>
               <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
                 <td style={{ padding: '12px' }}>양태양</td>
                 <td style={{ padding: '12px' }}>2021E7411</td>
-                <td style={{ padding: '12px', fontWeight: 'bold', color: '#059669' }}>Frontend</td>
+                <td style={{ padding: '12px'}}>Frontend</td>
                 <td style={{ padding: '12px' }}>UI 개발</td>
               </tr>
               <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
                 <td style={{ padding: '12px' }}>최유진</td>
                 <td style={{ padding: '12px' }}>2023E7518</td>
-                <td style={{ padding: '12px', fontWeight: 'bold', color: '#059669' }}>Frontend</td>
+                <td style={{ padding: '12px'}}>Frontend</td>
                 <td style={{ padding: '12px' }}>UI 디자인</td>
               </tr>
               <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
                 <td style={{ padding: '12px' }}>이준행</td>
                 <td style={{ padding: '12px' }}>2020E7427</td>
-                <td style={{ padding: '12px', fontWeight: 'bold', color: '#2563eb' }}>Backend</td>
+                <td style={{ padding: '12px'}}>Backend</td>
                 <td style={{ padding: '12px' }}>AI, 풀스택 개발</td>
               </tr>
               <tr>
                 <td style={{ padding: '12px' }}>정서영</td>
                 <td style={{ padding: '12px' }}>2020U2329</td>
-                <td style={{ padding: '12px', fontWeight: 'bold', color: '#2563eb' }}>Backend</td>
+                <td style={{ padding: '12px'}}>Backend</td>
                 <td style={{ padding: '12px' }}>백엔드,프론트엔드 지원</td>
               </tr>
             </tbody>
@@ -117,9 +83,7 @@ export function AboutUsView() {
         </div>
       </section>
 
-      <div style={{ textAlign: 'center', fontSize: '0.9em', color: '#9ca3af', borderTop: '1px solid #e5e7eb', paddingTop: '40px' }}>
-        <p>Copyright © 2025. Team 경로당. All Rights Reserved.</p>
-      </div>
+      
     </div>
   );
 }
