@@ -17,7 +17,7 @@ CORS(app, expose_headers=['Content-Disposition'])
 # ⚠️ 테스트용 PDF 파일 경로 (사용자 요청에 따라 절대 경로 사용)
 # 이 스크립트를 실행하기 전에, 이 경로에 'test.pdf' 파일을 준비해야 합니다.
 # -------------------------------------------------------------
-PDF_FILE_PATH = 'C:\\testwork\\backend\\test.pdf'
+PDF_FILE_PATH = os.path.join(os.path.dirname(__file__), 'test.pdf')
 
 # -------------------------------------------------------------
 # 메모리 내 작업 상태 저장소 (tasks.py의 'jobs' 딕셔너리 역할)
