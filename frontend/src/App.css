@@ -85,7 +85,8 @@ body {
   background-image: var(--bg-gradient);
   background-repeat: no-repeat;
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /*transition: background-color 0.3s ease, color 0.3s ease;*/
+  transition: all 0.3s ease;
 }
 
 #root {
@@ -106,7 +107,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  /* transition: background 0.3s ease, border-color 0.3s ease; */
+  transition: all 0.3s ease;
 }
 
 .header-content {
@@ -258,7 +260,9 @@ body {
   margin: 40px auto;
   text-align: center;
   animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  /* transition: background 0.3s ease, border-color 0.3s ease; */
+  transition: all 0.3s ease;
+  min-height: 520px;
 }
 
 .main-title {
@@ -349,7 +353,7 @@ body {
   font-weight: 500;
 }
 
-.drop-label::before {
+/* .drop-label::before {
   content: '↓';
   font-size: 1.8rem;
   color: var(--primary-color);
@@ -367,6 +371,38 @@ body {
 
 .drop-zone:hover .drop-label::before {
   transform: translateY(4px);
+} */
+
+/* 업로드 버튼 아이콘  */
+.circle-wrapper {
+  background: var(--surface-color); /* 하얀 배경 */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* 완전한 원형 */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: var(--shadow-soft); /* 그림자 효과 */
+  margin-bottom: 8px;
+  transition: transform 0.3s;
+}
+
+.dark-mode .upload-icon-img {
+  filter: invert(100%) brightness(100%);
+}
+
+/* 마우스 올렸을 때 동그라미가 살짝 움직이는 효과 */
+.drop-zone:hover .circle-wrapper {
+  transform: translateY(4px);
+}
+
+/* 👇 [신규] 동그라미 안쪽의 이미지 스타일 */
+.upload-icon-img {
+  width: 20px; /* 이미지 크기 조절 (동그라미 크기에 맞춰 조정하세요) */
+  height: auto;
+  opacity: 0.8; /* 필요시 투명도 조절 */
 }
 
 input[type="file"] {
@@ -505,7 +541,8 @@ button:active {
   background: var(--bg-color);
   border-radius: 20px;
   border: 1px solid var(--border-light);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  /* transition: background 0.3s ease, border-color 0.3s ease; */
+  transition: all 0.3s ease;
   text-align: center;
 }
 
@@ -816,6 +853,25 @@ button:active {
     display: block;
     margin-left: auto;
     /* 오른쪽 정렬 */
+  }
+
+  /* [추가] 모바일 전용 다크모드 버튼 크기 재정의 */
+  .mobile-toggle-wrapper .checkbox.model-1 label {
+    width: 72px;   /* 너비 늘림 (기존 48px) */
+    height: 39px;  /* 높이 늘림 (기존 26px) */
+  }
+
+  /* [추가] 내부 동그라미 크기 재정의 */
+  .mobile-toggle-wrapper .checkbox.model-1 label::before {
+    width: 32px;   /* (기존 20px) */
+    height: 32px;  /* (기존 20px) */
+    font-size: 18px;
+  }
+  
+  /* [추가] 체크되었을 때(다크모드 ON) 동그라미 위치 보정 */
+  /* '30px'은 (동그라미 너비 26px + 여백 4px) 입니다. */
+  .mobile-toggle-wrapper .checkbox.model-1 input[type="checkbox"]:checked+label::before {
+    left: calc(100% - 36px); 
   }
 }
 
