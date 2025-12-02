@@ -69,7 +69,7 @@ export function UploadForm({ onUpload, isLoading }) {
           id="fileInput"
           name="file"
           accept="audio/*"
-          capture="microphone"
+          // capture="microphone"
           onChange={handleFileChange}
           disabled={isLoading}
           hidden

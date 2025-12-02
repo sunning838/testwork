@@ -12,7 +12,7 @@
 | 최유진 | 2023E7518 | Frontend | [@cyj4795](https://github.com/cyj4795) | UI 디자인 |
 | 이준행 | 2020E7427 | Backend | [@LeopoldBloom2K](https://github.com/LeopoldBloom2K) |AI, 풀스택|
 | 정서영 | 2020U2329 | Backend | [@jwy23190](https://github.com/jwy23190) | 백엔드, 프론트 |
-
+    
 
 
 ---

@@ -398,9 +398,9 @@ body {
   transform: translateY(4px);
 }
 
-/* 👇 [신규] 동그라미 안쪽의 이미지 스타일 */
+/* 동그라미 안쪽의 이미지 스타일 */
 .upload-icon-img {
-  width: 20px; /* 이미지 크기 조절 (동그라미 크기에 맞춰 조정하세요) */
+  width: 20px;
   height: auto;
   opacity: 0.8; /* 필요시 투명도 조절 */
 }
